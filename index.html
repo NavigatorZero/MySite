@@ -1,10 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+
+
+     <script src="js/jquery-3.4.1.js"></script>
+     <script src="js/bootstrap.js"></script>
+     <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+
     <meta charset="utf-8">
     <title>test</title>
+
+
   </head>
   <body>
 
+       <nav class="navbar navbar-expand-md navbar-light  fixed-top">
+
+
+         <a class="navbar-brand" href="#">SVLV</a>
+
+
+         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+           <ul class="navbar-nav mr-auto">
+             <li class="nav-item active">
+               <a class="nav-link" href="#"> <p class="red">хех, здорова!</p></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#"><p class="red">Обо мне</p></a>
+             </li>
+
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><p class="red">Мое портфолио</p></a>
+               <div class="dropdown-menu" aria-labelledby="dropdown01">
+                 <a class="dropdown-item" href="#">Игры</a>
+                 <a class="dropdown-item" href="#">Приложения</a>
+                 <a class="dropdown-item" href="#">Сайты</a>
+               </div>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#"><p class="red">Блог</p></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#"><p class="red">Услуги</p></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#"><p class="red">Радио</p></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Heal"><p class="red">Скинуть на лечение</p></a>
+             </li>
+           </ul>
+
+              <audio src="Music/test.mp3" preload="auto" />
+
+         </div>
+       </nav>
+       <div class="Up" >
+       <main role="main" class="container">
+
+         <div class="starter-template">
+
+
+
+         </br>
+          </br>
+           </br>
+            </br>
+             </br>
+            <h1 class="red">Привет путник!</h1>
+            <a>Заходи, устраивайся  по удобнее</a>
+              <p> </p>
+              <button id="test"class="btn btn-outline-success my-2 my-sm-0">Жми сюда!</button><br>
+
+              <img src="img/Sun.jpg" class="Img" width="1000" height="500">
+               <img src="img/Sky.jpg" class="Img" width="1000" height="500">
+                <img src="img/Sky2.jpg" class="Img" width="1000" height="500">
+         </div>
+
+
+       </main><!-- /.container -->
+
+
+
+
+
+         <div style="display: none;">
+	          <div class="box-modal" id="boxUserFirstInfo">
+
+		<b>Здравствуй, милый человек!</b><br>
+		<br>
+		Надеюсь тебе понравится на нашем сайте!
+		У нас много интересной информации и очень отзывчивое комьюнити.
+		Добро пожаловать :)
+	         </div>
+
+            </div>
+
+       <!-- Bootstrap core JavaScript
+       ================================================== -->
+       <!-- Placed at the end of the document so the pages load faster -->
+
+
+
   </body>
+ <!-- Всплывающее окно-->
+
+<dialog>
+  <p>Это окно, которое сделано на html5 и javascript</p>
+  <button id="close">Закрыть</button>
+</dialog>
+<button id="show">Открыть всплывающее окно!</button>
+
+<script type = text/javascript>
+var dialog = document.querySelector('dialog');
+document.querySelector('#show').onclick = function() {
+  dialog.show();
+};
+document.querySelector('#close').onclick = function() {
+  dialog.close();
+};
+</script>
+
+  <script>
+  $("#test").click(function(event) {
+  var a = $('.Img');
+  a.slideToggle('slow/400/fast', function() {
+
+
+    });
+  });
+
+  </script>
+  <script src="APlayer/audio.min.js"></script>
+  <script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+
+
+</script>
+
+
+
+
+
+
+<style>
+.Up{
+background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('Img/1.jpg');
+-webkit-background-size: cover;
+-moz-background-size:  cover;
+-o-background-size: cover;
+
+height: 1920;
+width: 1080;
+}
+@font-face {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+body {
+background: #000;
+font-family: 'Open Sans', sans-serif;
+}
+h1 {
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+font-style: italic;
+font-size: 100px;
+}
+a,p{
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+font-style: italic;
+
+}
+h1.pink {
+color: #ffffff;
+text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+a.red,p.red,h1.red {
+color: #ffffff;
+text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;
+}
+h1.green {
+color: #ffffff;
+text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;
+}
+h1.blue {
+color: #ffffff;
+text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff, 0 0 100px #0000ff, 0 0 150px #0000ff;
+}
+h1.yellow {
+color: #ffffff;
+text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffff00, 0 0 80px #ffff00, 0 0 90px #ffff00, 0 0 100px #ffff00, 0 0 150px #ffff00;
+}
+
+
+</style>
 </html>
